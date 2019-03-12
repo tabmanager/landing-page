@@ -122,10 +122,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.container {
+  padding-top: 100px;
+}
 nav {
+  background-color: #29cdb5;
+  height: 50px;
   font-family: "Lato", times;
   position: fixed;
   width: 100%;
+}
+nav * {
+  color: #fff3e1;
 }
 @media ( min-width: 800px ) {
   nav {
@@ -146,9 +154,12 @@ nav {
 nav .nav-top {
   text-align: center;
 }
+nav .nav-top h1 {
+  font-size: 2em;
+}
 @media ( min-width: 800px ) {
   nav .nav-top {
-    width: 20%;
+    padding-left: 100px;
   }
 }
 @media ( max-width: 800px ) {
@@ -161,12 +172,28 @@ nav .nav-top {
 }
 @media ( min-width: 800px ) {
   nav .menu {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: baseline;
+  }
+}
+@media ( max-width: 800px ) {
+  nav .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: stretch;
   }
+}
+nav .menu a {
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+nav .menu a:hover {
+  color: #5e4949;
 }
 @media ( max-width: 800px ) {
   nav .dropdown-button {

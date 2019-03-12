@@ -2,11 +2,14 @@
 
 
 nav {
-
+    background-color: #29cdb5;
+    height: 50px;
     font-family: @primary-font;
     position: fixed;
     width: 100%;
-
+    * {
+        color: #fff3e1;
+    }
     @media @desktop {
         .flex(row, space-between, baseline);
     }
@@ -17,9 +20,13 @@ nav {
     }
 
     .nav-top {
+
+        h1 {
+            font-size: 2em;
+        }
         text-align: center;
         @media @desktop {
-            width: 20%;
+            padding-left: 100px;
         }
     	@media @mobile {
             .flex(row, space-between, baseline);    
@@ -27,28 +34,35 @@ nav {
     }
 
 
-    a {
-        &#about {
-        }
-
-
-        &:hover {}
-
-        &:active {}
-
-        @media @mobile {
-
-        }
-    }
 
     .menu {
 
         @media @desktop {
-            width: 50%;
-            .flex(row, space-evenly, stretch);
+            width: 40%;
+            .flex(row, space-evenly, baseline);
         }
 
         @media @mobile {
+            .flex(column, space-evenly, stretch);
+        }
+        
+        a {
+            text-align: center;
+            font-size: 1.5em;
+            text-decoration: none;
+            &#about {
+            }
+
+
+            &:hover {
+                color: #5e4949
+            }
+
+            &:active {}
+
+            @media @mobile {
+
+            }
         }
     }
 
