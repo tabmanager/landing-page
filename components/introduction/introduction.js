@@ -20,7 +20,7 @@ class Introduction extends Section{
         const feature = document.createElement("section");
         feature.appendChild(h3);
         feature.appendChild(p);
-        feature.classList.add("feature");
+        feature.classList.add("introduction");
 
         return feature;
     }
