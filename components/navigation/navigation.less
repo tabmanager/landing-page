@@ -1,25 +1,27 @@
 @primary-font: "Lato", times;
-
-
+@nav-height: 50px;
+@nav-bg-color:@teal;
+@anchor-color: @beige;
 nav {
-    background-color: #29cdb5;
-    height: 50px;
+    background-color: @nav-bg-color;
+    height: auto;
     font-family: @primary-font;
     position: fixed;
     width: 100%;
     * {
-        color: #fff3e1;
+        color: @anchor-color;
     }
     @media @desktop {
         .flex(row, space-between, baseline);
     }
 
 	@media @mobile {
-        .flex(column, space-between, stretch);
+        position: fixed;
+        .flex(column, center, stretch);
 
     }
 
-    .nav-top {
+    .nav-head {
 
         h1 {
             font-size: 2em;
@@ -29,7 +31,7 @@ nav {
             padding-left: 100px;
         }
     	@media @mobile {
-            .flex(row, space-between, baseline);    
+            .flex(row, space-between, stretch);    
         }    
     }
 
@@ -43,6 +45,8 @@ nav {
         }
 
         @media @mobile {
+            width: 100%;
+            background-color: @nav-bg-color;
             .flex(column, space-evenly, stretch);
         }
         
@@ -55,7 +59,7 @@ nav {
 
 
             &:hover {
-                color: #5e4949
+                color: @brown;
             }
 
             &:active {}

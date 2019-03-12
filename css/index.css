@@ -127,13 +127,13 @@ table {
 }
 nav {
   background-color: #29cdb5;
-  height: 50px;
+  height: auto;
   font-family: "Lato", times;
   position: fixed;
   width: 100%;
 }
 nav * {
-  color: #fff3e1;
+  color: #f2ead3;
 }
 @media ( min-width: 800px ) {
   nav {
@@ -145,29 +145,30 @@ nav * {
 }
 @media ( max-width: 800px ) {
   nav {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
   }
 }
-nav .nav-top {
+nav .nav-head {
   text-align: center;
 }
-nav .nav-top h1 {
+nav .nav-head h1 {
   font-size: 2em;
 }
 @media ( min-width: 800px ) {
-  nav .nav-top {
+  nav .nav-head {
     padding-left: 100px;
   }
 }
 @media ( max-width: 800px ) {
-  nav .nav-top {
+  nav .nav-head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: stretch;
   }
 }
 @media ( min-width: 800px ) {
@@ -181,6 +182,8 @@ nav .nav-top h1 {
 }
 @media ( max-width: 800px ) {
   nav .menu {
+    width: 100%;
+    background-color: #29cdb5;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
