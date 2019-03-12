@@ -2,15 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
+    <script></script>
     <title>Tabless Thursday</title>
   </head>
   <body>
+    <script defer="defer" src="./components/navigation/navigation.js"></script>
+    
     <nav>
-        <h1 class="logo">Tabless Thursday</h1>
-        <div class="menu">
+
+        <div class="nav-top">
+            <h1 class="logo">Tabless Thursday</h1>
+            <button class="dropdown-button hidden-desktop"></button>
+        </div>
+
+        <div class="menu hidden-mobile">
             <a href="">Home</a>
             <a href="">About</a>
             <a href="">Log In</a>

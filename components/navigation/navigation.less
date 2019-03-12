@@ -1,0 +1,77 @@
+@primary-font: "Lato", times;
+
+
+nav {
+
+    font-family: @primary-font;
+    position: fixed;
+    width: 100%;
+
+    @media @desktop {
+        .flex(row, space-between, baseline);
+    }
+
+	@media @mobile {
+        .flex(column, space-between, stretch);
+
+    }
+
+    .nav-top {
+        text-align: center;
+        @media @desktop {
+            width: 20%;
+        }
+    	@media @mobile {
+            .flex(row, space-between, baseline);    
+        }    
+    }
+
+
+    a {
+        &#about {
+        }
+
+
+        &:hover {}
+
+        &:active {}
+
+        @media @mobile {
+
+        }
+    }
+
+    .menu {
+
+        @media @desktop {
+            width: 50%;
+            .flex(row, space-evenly, stretch);
+        }
+
+        @media @mobile {
+        }
+    }
+
+    .dropdown-button {
+        
+        @media @mobile {
+            .size(50px,50px);
+        }
+    }
+
+    .hidden-desktop {
+        
+        @media @desktop {
+            display: none;
+        }
+    }
+
+    .hidden-mobile {
+        
+        @media @mobile {
+            display: none;
+        }
+    }
+
+    
+}
