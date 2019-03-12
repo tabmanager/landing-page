@@ -1,9 +1,9 @@
-class Feature {
+class Feature extends Section {
     constructor(attributes) {
         super(attributes);
     }
 
-    display() {
+    create() {
         const h3 = document.createElement("h3");        
         const title = document.createTextNode(this.title);
         h3.appendChild(title);
