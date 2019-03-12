@@ -1,7 +1,8 @@
-class Introduction {
+class Introduction extends Section{
     constructor(attributes) {
-        this.title = attributes.title;
+        super(attributes);
         this.subtitle = attributes.subtitle;
-        this.description = attributes.description;
     }
+
+
 }

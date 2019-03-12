@@ -1,7 +1,6 @@
 class Feature {
     constructor(attributes) {
-        this.title = attributes.title;
-        this.description = attributes.description;
+        super(attributes);
     }
 
     display() {
