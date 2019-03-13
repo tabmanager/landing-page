@@ -19,3 +19,7 @@ const content = {
         }
     ]
 }
+
+const about = [
+    
+]

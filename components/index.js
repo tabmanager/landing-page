@@ -1,6 +1,6 @@
 
     console.log("page loaded");
-
+Navigation(".navigation");
     
 const header = document.querySelector("header");
 const intro = new Introduction(content.introduction).create();
