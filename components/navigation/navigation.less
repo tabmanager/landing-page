@@ -4,7 +4,6 @@
 @anchor-color: @beige;
 nav {
     background-color: @nav-bg-color;
-    height: auto;
     font-family: @primary-font;
     position: fixed;
     width: 100%;
@@ -12,11 +11,12 @@ nav {
         color: @anchor-color;
     }
     @media @desktop {
-        .flex(row, space-between, baseline);
+        height: @nav-height;
+        .flex(row, space-between, center);
     }
 
 	@media @mobile {
-        position: fixed;
+        height: auto;
         .flex(column, center, stretch);
 
     }
@@ -25,12 +25,17 @@ nav {
 
         h1 {
             font-size: 2em;
+            .flex(row, center, center);
+            @media @mobile {
+                width: 100%;
+            }
         }
-        text-align: center;
         @media @desktop {
             padding-left: 100px;
+            .flex(row, flex-start, stretch);    
         }
     	@media @mobile {
+
             .flex(row, space-between, stretch);    
         }    
     }
@@ -41,7 +46,7 @@ nav {
 
         @media @desktop {
             width: 40%;
-            .flex(row, space-evenly, baseline);
+            .flex(row, space-evenly, stretch);
         }
 
         @media @mobile {
@@ -51,7 +56,7 @@ nav {
         }
         
         a {
-            text-align: center;
+            
             font-size: 1.5em;
             text-decoration: none;
             &#about {
@@ -65,15 +70,29 @@ nav {
             &:active {}
 
             @media @mobile {
-
+                height: @nav-height;
+                .flex(row, center, center);
             }
         }
     }
 
     .dropdown-button {
-        
+        background-color: @nav-bg-color;
+        background-image: url(../assets/icons/menu-arrow-down.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        // border: solid @beige 2px;
+        border: none;
+        border-radius: 10px;
+        transition: background-image 0.5s;
         @media @mobile {
             .size(50px,50px);
+        }
+
+        &.dropdown-button-active {
+            background-image: url(../assets/icons/menu-arrow-up.svg);
+            transition: background-image 0.5s;
         }
     }
 

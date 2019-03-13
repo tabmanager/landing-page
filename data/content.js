@@ -21,5 +21,12 @@ const content = {
 }
 
 const about = [
-    
+    {
+        img:"",
+        name:"Duc Vu",
+        bio:"",
+        linkedin:"",
+        github:"",
+        twitter:""
+    }
 ]

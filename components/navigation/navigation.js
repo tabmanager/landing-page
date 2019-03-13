@@ -26,7 +26,8 @@ class MenuButton {
     }
 
     expandMenu() {
-        this.menu.classList.toggle("hidden-mobile")
+        this.menuButton.classList.toggle("dropdown-button-active");
+        this.menu.classList.toggle("hidden-mobile");
     }
 }
 
