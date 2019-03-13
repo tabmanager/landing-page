@@ -1,0 +1,37 @@
+@primary-font: "Lato", times;
+
+.flex(@direction, @main, @cross) {
+    display: flex;
+    flex-direction: @direction;
+    align-items: @cross;
+    justify-content: @main;
+}
+
+nav {
+
+    font-family: @primary-font;
+    background-color: aquamarine;
+    position: fixed;
+    width: 100%;
+    @media @mobile {
+        .flex(column, center, stretch);
+    }
+
+    @media @desktop {
+        .flex(row, space-between, baseline);
+    }
+
+    h1 {
+        @media @desktop {
+            margin-left: 50px;
+        }
+    }
+
+    .menu {
+
+        @media @desktop {
+            width: 50%;
+            .flex(row, space-evenly, baseline);
+        }    
+    }
+}
