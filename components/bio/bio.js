@@ -7,7 +7,6 @@ function Bio(attributes) {
     img.src = attributes.img;
     p.innerText = attributes.bio;
     h4.innerText = attributes.name;
-    var t0 = performance.now();
 
     section.append(img);
     section.append(h4);
@@ -15,6 +14,5 @@ function Bio(attributes) {
 
     section.classList.add("bio");
     var t1 = performance.now();
-    console.log(t1 - t0);
     return section
 }

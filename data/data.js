@@ -30,14 +30,48 @@ const content = {
     ]
 }
 
-const about = [
+const team = [
     {
         img:"",
         name:"Duc Vu",
         bio:"",
-        linkedin:"https://www.linkedin.com/in/ducbavu531/",
-        github:"",
+        linkedin:"https://www.linkedin.com/in/dbv135/",
+        github:"https://github.com/vud531",
+        twitter:"https://twitter.com/@vud531"
+    },
+    {
+        img:"./assets/profiles/kelli.jpg",
+        name:"Kelli Rae Hanson",
+        bio:"Full Stack Web Development Student",
+        linkedin:"https://www.linkedin.com/in/kelli-rae-hanson-298b6317b/",
+        github:"https://github.com/kelliraehanson",
+        twitter:"https://twitter.com/@kelliraehanson"
+    },
+    {
+        img:"assets/profiles/brandon.jpg",
+        name:"Brandon Desselle",
+        bio:"Full Stack Web Development Student",
+        linkedin:"https://www.linkedin.com/in/brandon-desselle-33b689161/",
+        github:"https://github.com/BDesselle",
+        twitter:"https://twitter.com/KekklesKat" 
+    },
+    {
+        img:"assets/profiles/jamie.jpg",
+        name:"Jamie Goodnight",
+        bio:"Jamie Goodnight is a thief who stole an expensive painting once. It was very small and he did it because he wanted to feel in control of his life. It was thrilling, but ultimately didn't solve his problem. It's not an excuse to steal paintings just because you're sad though. He's currently a vegetarian, but check back.",
+        linkedin:"https://www.linkedin.com/in/jamie-goodnight-54319b180/",
+        github:"https://github.com/jamiegoodnight",
         twitter:""
-    }
+    },
+    {
+        img:"assets/profiles/rahul.jpg",
+        name:"Rahul Desai",
+        bio:"Rahul is a full-stack web developer with a background in corporate strategy. In his past life as consultant, he helped numerous household brands dream up and launch new products, services, and experiences. He's looking to combine his business and technical skills to go from advising makers to being a maker himself. For fun, he reads every book he can get his hands on and cheers on the Georgetown Hoyas (no matter how disappointing they are).",
+        linkedin:"https://www.linkedin.com/in/rdesai01/",
+        github:"https://github.com/rd825",
+        twitter:"https://twitter.com/RDesai01" 
+    },
+
+
 ]
 
