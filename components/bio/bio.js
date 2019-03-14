@@ -7,10 +7,12 @@ function Bio(attributes) {
     img.src = attributes.img;
     p.innerText = attributes.bio;
     h4.innerText = attributes.name;
+
     section.append(img);
     section.append(h4);
     section.append(p);
 
     section.classList.add("bio");
+    var t1 = performance.now();
     return section
 }

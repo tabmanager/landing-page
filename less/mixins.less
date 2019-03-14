@@ -9,3 +9,13 @@
     height: @height;
     width: @width;
 }
+
+.dropdown-animation(@positionY, @duration) {
+    transform: translateY(@positionY);
+    transition: all @duration;
+}
+
+.rotate-animation(@degree, @duration) {
+    transform: rotate(@degree);
+    transition: all @duration;
+}
