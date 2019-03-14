@@ -1,98 +1,141 @@
-@primary-font: "Lato", times;
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Oleo+Script|Roboto+Mono');
+
+// @primary-font: "Lato", times;
 @nav-height: 50px;
-@nav-bg-color:@teal;
+@nav-bg-color:teal;
 @anchor-color: @beige;
 nav {
-    background-color: @nav-bg-color;
-    font-family: @primary-font;
     position: fixed;
     width: 100%;
     * {
         color: @anchor-color;
     }
     @media @desktop {
+        background-color: @nav-bg-color;
         height: @nav-height;
         .flex(row, space-between, center);
     }
 
 	@media @mobile {
-        height: auto;
         .flex(column, center, stretch);
 
     }
 
     .nav-head {
+        width: 100%;
+        background-color: @nav-bg-color;
 
         h1 {
+            background-color:@beige;
+            font-weight: bold; 
+            color: @brown;
+            font-family: 'Roboto Mono', monospace;
             font-size: 2em;
             .flex(row, center, center);
             @media @mobile {
-                width: 100%;
+                
             }
         }
         @media @desktop {
-            padding-left: 100px;
-            .flex(row, flex-start, stretch);    
+            padding-left: 5%;
+            .flex(row, flex-start, center); 
+   
         }
     	@media @mobile {
 
-            .flex(row, space-between, stretch);    
+            .flex(row-reverse, space-between, center);    
         }    
     }
 
-
-
     .menu {
-
+        height: 100%;
         @media @desktop {
             width: 40%;
-            .flex(row, space-evenly, stretch);
+            .flex(row, space-around, stretch);
         }
 
         @media @mobile {
+            position: relative;
+            z-index: -1;
             width: 100%;
-            background-color: @nav-bg-color;
-            .flex(column, space-evenly, stretch);
+            background-color: teal;
+            .flex(row, space-evenly, stretch);
+            .dropdown-animation(0px, 0.2s);
         }
         
         a {
-            
+            font-family: 'Oleo Script', cursive;
             font-size: 1.5em;
             text-decoration: none;
+            transition: all 0.1s;
+            width: 100%;
+            .flex(row, center, center);
             &#about {
             }
 
-
-            &:hover {
-                color: @brown;
+            @media @desktop {
             }
-
-            &:active {}
 
             @media @mobile {
                 height: @nav-height;
-                .flex(row, center, center);
+                background-color: teal;
+            }
+            &:last-child {
+                background-color: @beige;
+                color: @brown;
+
+                &:hover {
+                    color: teal;
+                    transition: all 0.1s;
+                }
+            }
+
+            &:hover {
+                @media @desktop {
+                    color: @brown;
+                    transition: color 0.1s;
+                }
+            }
+
+            &:active {
+                color: @brown;
+                padding-top: 10px;
+                border: none;
+                @media @desktop {
+
+                }
             }
         }
     }
 
     .dropdown-button {
+
+        .dropdown-icon {
+
+            .rotate-animation(0deg, 0.25s);
+
+            path {
+                fill: @beige;
+            }
+        }
         background-color: @nav-bg-color;
-        background-image: url(../assets/icons/menu-arrow-down.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 80%;
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // background-size: 80%;
         // border: solid @beige 2px;
         border: none;
-        border-radius: 10px;
-        transition: background-image 0.5s;
+        // border-radius: 10px;
+        // transition: background-image 0.5s;
         @media @mobile {
             .size(50px,50px);
         }
 
         &.dropdown-button-active {
-            background-image: url(../assets/icons/menu-arrow-up.svg);
-            transition: background-image 0.5s;
+            // transition: background-image 0.5s;
+            svg {
+                .rotate-animation(-180deg, 0.25s);
+            }
+
         }
     }
 
@@ -104,9 +147,9 @@ nav {
     }
 
     .hidden-mobile {
-        
+
         @media @mobile {
-            display: none;
+            .dropdown-animation(-50px, 0.2s);
         }
     }
 
