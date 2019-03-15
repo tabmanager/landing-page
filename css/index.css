@@ -151,7 +151,7 @@ body {
   width: 0px;
 }
 .image {
-  width: 100%;
+  width: 100% !important;
   height: 600px;
   position: sticky;
   background-image: url("../assets/background-tabs.png");
