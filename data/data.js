@@ -5,22 +5,23 @@ const content = {
                     <path d="M9.914 11.086l-2.829 2.829 8.914 8.914 8.914-8.914-2.828-2.828-6.086 6.086z"></path>
                 </svg>`,
     introduction: {
-        title: "your title here",
-        subtitle: "your subtitle here",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        title: "What is tabless thursday?",
+        url: "https://tabmanager.netlify.com/",
+        subtitle: "Go to tabless thursday",
+        description: "Tabless thurday is <span class=\"emphasis\">an amazing app</span> that let you <span class=\"emphasis\">organize clustered tabs</span> on your internet browser as well as making it <span class=\"emphasis\">easier to pick up</span> where you left off."
     },
     features: [
         {
-            title: "feature 1",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Productivity",
+            description: "Users can save their open tabs for later view and focus on their current task."
         },
         {
-            title: "feature 2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Open Access",
+            description: "Users can access their saved tab on any device with access to the internet with their user account."
         },
         {
-            title: "feature 3",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Orgization",
+            description: "Users can minimize opened tab on their internet browser and \"internet\" more efficiently. "
         }
     ],
     icon: 

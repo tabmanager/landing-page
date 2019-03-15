@@ -1,4 +1,6 @@
 function Bio(attributes) {
+    var t0 = performance.now();
+
     const img = document.createElement('img')
     const section = document.createElement('section');
     const h4 = document.createElement('h4');
@@ -12,7 +14,7 @@ function Bio(attributes) {
     img.src = attributes.img;
     p.innerText = attributes.bio;
     h4.innerText = attributes.name;
-    h4.innerHTML += `<br> ${attributes.role}`;
+    h4.innerHTML += `<br> [${attributes.role}]`;
     figure.append(img);
     box.append(figure);
     box.append(div)
@@ -33,13 +35,14 @@ function Bio(attributes) {
         div.append(twitter);
     }
 
-
+    
     section.append(box);
     section.append(h4);
     section.append(p);    
 
-
+    section.dataset.role = attributes.role;
     section.classList.add("bio");
     var t1 = performance.now();
+    console.log(t1 - t0);
     return section
 }

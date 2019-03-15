@@ -1,19 +1,21 @@
 .team {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin: auto;
     justify-content: space-between;
     align-items: flex-start;
+    @media @mobile-md {
+        max-width: 375px;
+    }
 }
 
-@gray: #f1f3f4;
-@dark-teal: #1395ba;
-@dirt: #333333;
 .bio {
     background-color: @gray;
     max-width: 350px;
     .shadow-box();
+    margin-bottom: 15px;
+
     // height: fit-content;
     figure {
         max-height: 400px;
@@ -58,16 +60,11 @@
         width: 90%;
         padding: 5%;
     }
-    // p::after {
-    //     .double-qoute("”");
-
-    // }
-
-    
-
-    
-
-
+}
+.bio[data-role="Team Lead"] {
+    @media @mobile {
+        order: -1;
+    }
 }
 .social {
     background-color: @gray;
@@ -76,13 +73,24 @@
     a {
         background-color: @beige;
         // border-bottom: solid @brown 1px;
-        &:hover {
-            svg {
-                transform: translateX(5px);
-                // padding-left: 5px;
-                fill: teal;
+        @media @desktop {
+            &:hover {
+                svg {
+                    // transform: translateX(5px);
+                    // padding-left: 5px;
+                    fill: teal;
+                }
             }
         }
+
+        &:active {
+            svg {
+                transform: translateY(0px);
+                // padding-left: 5px;
+                fill: @dirt;
+            }
+        }
+
     }
     svg {
 

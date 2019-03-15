@@ -10,9 +10,9 @@ function Navigation(item) {
     </div>
 
     <div class="menu hidden-mobile">
-        <a href="index.html">home</a>
-        <a href="about.html">about</a>
-        <a href="https://tabmanager.netlify.com/">join</a>
+        <a href="index.html">about</a>
+        <a href="about.html">contact</a>
+        <a href="https://tabmanager.netlify.com/">sign up</a>
     </div>
     `;
     var t1 = performance.now();

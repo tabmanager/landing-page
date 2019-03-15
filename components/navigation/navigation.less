@@ -17,7 +17,9 @@ nav {
         height: @nav-height;
         .flex(row, space-between, center);
     }
-
+    @media @mobile-md {
+        max-width: 375px;
+    }
 	@media @mobile {
         .flex(column, center, stretch);
 
