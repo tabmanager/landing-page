@@ -1,0 +1,44 @@
+.features {
+    .flex-wrap();
+    margin: 0px 0px 100px;
+
+    @media @mobile-md {
+        max-width: 375px;
+    }
+}
+
+.feature {
+    background-color: @beige;
+    .shadow-box();
+    @media @desktop {
+        width: 30%;
+    }
+    @media @mobile {
+        width: 100%;
+    }
+    h3 {
+        font-family: 'Oleo Script', cursive;
+        background-color:@brown;
+        color:@beige;
+        font-size: 2em;
+
+        @media @desktop {
+            padding: 5px 25px;
+        }
+
+        @media @mobile {
+            padding: 1px 5px;
+
+        }
+    }
+
+    p {
+        font-family: 'Lato', monospace;
+        font-size: 1.5em;
+        margin: 5%;
+        padding: 0% 2.5%;
+        color: @brown;
+        background-color: @beige;
+        line-height: 1.5;
+    }
+}

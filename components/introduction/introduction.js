@@ -2,6 +2,7 @@ class Introduction extends Section{
     constructor(attributes) {
         super(attributes);
         this.subtitle = attributes.subtitle;
+        this.url = attributes.url;
     }
 
     create() {
@@ -9,18 +10,20 @@ class Introduction extends Section{
         const title = document.createTextNode(this.title);
         h1.appendChild(title);
 
-        const h3 = document.createElement("h3");        
+        const a = document.createElement("a");        
         const subtitle = document.createTextNode(this.subtitle);
-        h3.appendChild(subtitle);
+        a.appendChild(subtitle);
+        a.href=this.url;
 
         const p = document.createElement("p");        
-        const description = document.createTextNode(this.description);
-        p.appendChild(description);
+        // const description = document.inner(this.description);
+        p.innerHTML = this.description;
 
         const feature = document.createElement("section");
         feature.appendChild(h1);
-        feature.appendChild(h3);
         feature.appendChild(p);
+        feature.appendChild(a);
+
         feature.classList.add("introduction");
 
         return feature;

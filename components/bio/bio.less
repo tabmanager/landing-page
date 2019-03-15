@@ -1,0 +1,99 @@
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media @mobile-md {
+        max-width: 375px;
+    }
+}
+
+.bio {
+    background-color: @gray;
+    max-width: 350px;
+    .shadow-box();
+    margin-bottom: 15px;
+
+    // height: fit-content;
+    figure {
+        max-height: 400px;
+        overflow: hidden;
+        text-align: center;
+        img {
+            max-width: 300px;
+
+            transition: all 0.5s;
+            
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.5s;
+            }
+        }
+    }
+    .box {
+        .flex(row, center,center)
+    }
+    h4 {
+        text-align: center;
+        line-height: 1.5;
+        width: fit-content;
+        margin: auto;
+        color: @gray;
+        background-color: @dark-teal;
+        font-family: 'Lato', monospace;
+        font-size: 30px;
+        padding: 5px 10px;
+    }
+
+
+    p::before {
+        .double-qoute("“");
+    }
+    p {
+        font-size: 1.2em;
+        color:@dirt;
+        font-family: 'Lato', monospace;
+        line-height: 1.5;
+        width: 90%;
+        padding: 5%;
+    }
+}
+.bio[data-role="Team Lead"] {
+    @media @mobile {
+        order: -1;
+    }
+}
+.social {
+    background-color: @gray;
+    height: 120px;
+    .flex(column, space-evenly, center);
+    a {
+        background-color: @beige;
+        // border-bottom: solid @brown 1px;
+        @media @desktop {
+            &:hover {
+                svg {
+                    // transform: translateX(5px);
+                    // padding-left: 5px;
+                    fill: teal;
+                }
+            }
+        }
+
+        &:active {
+            svg {
+                transform: translateY(0px);
+                // padding-left: 5px;
+                fill: @dirt;
+            }
+        }
+
+    }
+    svg {
+
+        fill: @dirt;
+    }
+}
