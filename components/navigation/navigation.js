@@ -12,7 +12,7 @@ function Navigation(item) {
     <div class="menu hidden-mobile">
         <a href="index.html">home</a>
         <a href="about.html">about</a>
-        <a href="">join</a>
+        <a href="https://tabmanager.netlify.com/">join</a>
     </div>
     `;
     var t1 = performance.now();

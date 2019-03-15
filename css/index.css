@@ -122,6 +122,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html,
+body {
+  background-color: #29cdb5;
+}
 .container {
   padding-top: 100px;
   background-color: #29cdb5;
@@ -145,6 +149,8 @@ table {
   src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v6/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype');
 }
 nav {
+  position: relative;
+  z-index: 99;
   position: fixed;
   width: 100%;
 }
@@ -304,4 +310,79 @@ nav .dropdown-button.dropdown-button-active svg {
   align-items: stretch;
   box-shadow: 0px 2.5px 5px 0px #008080;
   margin: 5%;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.bio {
+  background-color: #f1f3f4;
+  max-width: 350px;
+  box-shadow: 0px 2.5px 5px 0px #008080;
+}
+.bio figure {
+  max-height: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+.bio figure img {
+  max-width: 300px;
+  transition: all 0.5s;
+}
+.bio figure img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.bio .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bio h4 {
+  text-align: center;
+  line-height: 1.5;
+  width: fit-content;
+  margin: auto;
+  color: #f1f3f4;
+  background-color: #1395ba;
+  font-family: 'Lato', monospace;
+  font-size: 30px;
+  padding: 5px 10px;
+}
+.bio p::before {
+  line-height: 1;
+  content: "“";
+  font-family: fantasy;
+  font-size: 2.5em;
+}
+.bio p {
+  font-size: 1.2em;
+  color: #333333;
+  font-family: 'Lato', monospace;
+  line-height: 1.5;
+  width: 90%;
+  padding: 5%;
+}
+.social {
+  background-color: #f1f3f4;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.social a {
+  background-color: #f2ead3;
+}
+.social a:hover svg {
+  transform: translateX(5px);
+  fill: teal;
+}
+.social svg {
+  fill: #333333;
 }
